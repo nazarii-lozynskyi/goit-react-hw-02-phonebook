@@ -24,4 +24,9 @@ const SearchForContacts = ({ onChange, value, filterId = uuidv4() }) => (
   </div>
 );
 
+SearchForContacts.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+};
+
 export default SearchForContacts;
