@@ -1,9 +1,16 @@
 import { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+
+import PropTypes from 'prop-types';
+
 import styles from './Form.module.css';
 
 class Form extends Component {
   state = { name: '', number: '' };
+
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
 
   nameInputId = uuidv4();
   numberInputId = uuidv4();
