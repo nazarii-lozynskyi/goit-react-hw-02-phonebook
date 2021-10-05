@@ -22,9 +22,9 @@ class PhoneBook extends React.Component {
   addContacts = data => {
     //console.log(data);
 
-    const checkForDuplicationOfContacts = this.state.contacts
-      .map(contact => contact.name)
-      .includes(data.name);
+    const checkForDuplicationOfContacts = this.state.contacts.find(
+      contact => contact.name === data.name
+    );
 
     if (checkForDuplicationOfContacts) {
       alert(`${data.name} is already in contacts`);
